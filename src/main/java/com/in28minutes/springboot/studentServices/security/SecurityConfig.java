@@ -9,7 +9,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //    Authentication: User --> Roles
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication().withUser("user1").password("secret1").roles("User").and().withUser("admin1").password("secret1").roles("USER", "ADMIN");
+        auth.inMemoryAuthentication().withUser("user1").password("{noop}secret1").roles("User").and().withUser("admin1").password("{noop}secret1").roles("USER", "ADMIN");
     }
 
 //    Authorization: Role --> Access
