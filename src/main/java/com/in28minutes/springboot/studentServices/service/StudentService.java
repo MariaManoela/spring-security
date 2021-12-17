@@ -34,7 +34,7 @@ public class StudentService {
         return students;
     }
 
-    public Student retrieveStudent(String studentId) {
+    public static Student retrieveStudent(String studentId) {
         for (Student student : students) {
             if (student.getId().equals(studentId)) {
                 return student;
@@ -52,7 +52,7 @@ public class StudentService {
         return student.getCourses();
     }
 
-    public Course retrieveCourse(String studentId, String courseId){
+    public static Course retrieveCourse(String studentId, String courseId){
         Student student = retrieveStudent((studentId));
 
         if(student == null){
