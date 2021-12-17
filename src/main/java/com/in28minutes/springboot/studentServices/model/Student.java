@@ -2,12 +2,14 @@ package com.in28minutes.springboot.studentServices.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.websocket.server.ServerEndpoint;
 import java.util.List;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 public class Student {
